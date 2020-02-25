@@ -71,14 +71,26 @@ Installation
 To install the program run
 
 sudo apt-get update
+
 sudo apt-get upgrade
+
 sudo apt-get install git nano
-git clone https://github.com/aortner/rtcmserver.git
+
+ git clone https://github.com/aortner/rtcmserver.git
+
+
+cd ntripserver
+
 make
 
 The executable will show up as ntripserver on Linux
 
 edit startntripserver.service
+
+sudo systemctl enable startntripserver.service
+
+sudo systemctl start startntripserver.service
+
 
 sudo ./update.sh
 
