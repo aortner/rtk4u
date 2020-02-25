@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=10
-ExecStart=/bin/bash -c "/home/pi/ntripserver/ntripserver -M 1 -i  /dev/ttyACM0 -b 115200  -O 1 -a 185.164.4.143 -p 2101 -m TEST -n aortner -c noreturn"
+ExecStart=/bin/bash -c "/home/pi/rtcmserver/ntripserver -M 1 -i  /dev/ttyACM0 -b 115200  -O 1 -a 185.164.4.143 -p 2101 -m TEST -n aortner -c noreturn"
 
 [Install]
 WantedBy=multi-user.target
