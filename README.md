@@ -5,13 +5,6 @@
 (c) German Federal Agency for Cartography and Geodesy (BKG), 2002-2019
 
 
-Files in ntripserver.zip
-------------------------
-- makefile: preconfigured makefile for convenient installation
-- ntripserver.c: c source file
-- README: Readme file for the ntripserver program
-
-
 NTRIP
 -----
 The ntripserver is a HTTP client based on "Networked Transport of 
