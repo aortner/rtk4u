@@ -101,7 +101,12 @@ sudo systemctl start startntripserver.service
 
 
 
+Zabbix
+------
 
+sudo apt-get install zabbix-agent
+
+sudo nano /etc/zabbix/zabbix_agentd.conf
 
 
 Usage
