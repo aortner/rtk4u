@@ -70,21 +70,20 @@ Installation
 ------------
 To install the program run
 
-- gunzip ntripserver.tgz
-- tar -xf ntripserver.tar
-- make, or 
-- make debug (for debugging purposes).
-
-To compile the source code on a Windows system where a mingw gcc
-compiler is available, you may like to run the following command:
-
-- gcc -Wall -W -O3 -DWINDOWSVERSION ntripserver.c -DNDEBUG 
-  -o ntripserver -lwsock32, or
-- mingw32-make, or 
-- mingw32-make debug
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git nano
+git clone https://github.com/aortner/rtcmserver.git
+make
 
 The executable will show up as ntripserver on Linux
-or ntripserver.exe on a Windows system.
+
+edit startntripserver.service
+
+sudo ./update.sh
+
+
+
 
 Usage
 -----
