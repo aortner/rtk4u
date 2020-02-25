@@ -79,13 +79,13 @@ sudo apt-get install git nano
  git clone https://github.com/aortner/rtcmserver.git
 
 
-cd ntripserver
+cd rtcmserver
 
 make
 
 The executable will show up as ntripserver on Linux
 
-edit startntripserver.service
+nano startntripserver.service
 
 sudo systemctl enable startntripserver.service
 
