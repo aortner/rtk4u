@@ -87,6 +87,11 @@ The executable will show up as ntripserver on Linux
 
 nano startntripserver.service
 
+chmod +x ./startntripserver.service
+
+chmod +x ./update.sh
+
+
 sudo ./update.sh
 
 sudo systemctl enable startntripserver.service
