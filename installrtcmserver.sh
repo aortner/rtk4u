@@ -30,7 +30,7 @@ read -p "Benutzer:" nUSER
 
 echo ""
 
-read -p "Password:" nPASSWORD
+read -p "PASSWORD: " nPASSWORD
 
 
 echo ""
