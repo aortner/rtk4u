@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=10
-ExecStart=/bin/bash -c "/home/pi/rtcmserver/ntripserver -M 1 -i  /dev/ttyACM0 -b 115200  -O 1 -a 185.164.4.143 -p 2101 -m MOUNTPOINT -n USER -c PASSWORD"
+ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n USER -c PASS -a HOST -p PORT -m /MOUNT
 
 [Install]
 WantedBy=multi-user.target
