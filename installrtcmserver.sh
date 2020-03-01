@@ -69,7 +69,17 @@ sudo systemctl enable startntripserver.service
 
 sudo systemctl start startntripserver.service
 
+echo "Richte Monitoring system ein"
+echo "lade Agent herunter"
+sudo apt-get install zabbix-agent
 
+echo "update und konfiguriere zabbix-agent"
+#sed -i 's/hostname=rtk/hostname=$nMOUN/g' zabbix_agentd.conf
+
+sudo cp zabbix_agentd.conf /etc/zabbix/
+
+sudo systemctl enable zabbix_agentd 
+sudo systemctl start zabbix_agentd 
 
 
 echo ""
