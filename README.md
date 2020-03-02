@@ -85,14 +85,6 @@ cd rtcmserver
 
 
 
-Zabbix
-------
-
-sudo apt-get install zabbix-agent
-
-sudo nano /etc/zabbix/zabbix_agentd.conf
-
-
 Usage
 -----
 The user may call the program with the following options:
