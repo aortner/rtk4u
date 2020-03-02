@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 Restart=always
 RestartSec=10
-ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n aortner -c noreturn -a 185.164.4.143 -p 2101 -m testrtk
+ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n aortner -c noreturn -a 185.164.4.143 -p 2101 -m rtk3
 
 [Install]
 WantedBy=multi-user.target
