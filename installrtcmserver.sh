@@ -18,7 +18,9 @@ echo "Geben sie ihren gewuenschten Mountpoint ein:"
 echo "Format: BL-BE-Mountpoint"
 echo "zb: ST-GR-DAHEIM"
 echo "bedeutet: Steiermark , Graz und Daheim als Name"
-
+echo ""
+echo ""
+read -p "ENTER um zu starten" ee
 
 echo ""
 
