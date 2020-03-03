@@ -1,3 +1,40 @@
+
+Installation
+------------
+Zum installieren folgendes ausführen:
+
+zuerst von https://www.raspberrypi.org/downloads/raspbian/
+
+Raspbian Buster Lite herunterladen. 
+
+auf eine SD Karte spielen
+
+auf der boot Partition einen textdatei mit dem namen ssh anlegen (keine endung!)
+
+sd karten in den raspberry einlegen, mit netzwerk verbinden
+
+die ipadresse vom rasperry suchen
+
+mit ssh (zb Putty) mit raspberry verbinden
+
+login als pi - password raspberry
+
+passwd   # ändert das Password - altes Password eingeben und neues anlegen!
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install git nano socat
+
+ git clone https://github.com/aortner/rtcmserver.git
+
+
+cd rtcmserver
+
+./installrtcmserver.sh
+
+
 ----------------------------------------------------------------------
                           ntripserver
 ----------------------------------------------------------------------
@@ -64,24 +101,6 @@ Please note, the options to support NTRIP Version 2.0 are currently still
 under development and should be used with care. Keep in mind that details
 of the NTRIP Version 2.0 transport protocol are still under discussion
 and may be changed.
-
-
-Installation
-------------
-To install the program run
-
-sudo apt-get update
-
-sudo apt-get upgrade
-
-sudo apt-get install git nano socat
-
- git clone https://github.com/aortner/rtcmserver.git
-
-
-cd rtcmserver
-
-./installrtcmserver.sh
 
 
 
