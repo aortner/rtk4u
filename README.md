@@ -3,6 +3,10 @@ Installation
 ------------
 Zum installieren folgendes ausführen:
 
+sd karte der alten basis aufbewahren(als backup)
+
+neue sd karte verwenden
+
 zuerst von https://www.raspberrypi.org/downloads/raspbian/
 
 Raspbian Buster Lite herunterladen. 
