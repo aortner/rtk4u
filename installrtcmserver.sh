@@ -74,11 +74,15 @@ echo "lade Agent herunter"
 sudo apt-get install zabbix-agent
 
 echo "update und konfiguriere zabbix-agent"
-sed -i 's/Hostname=rtk/hostname=$nMOUNT/g' zabbix_agentd.conf
+
+
+rtk="-rtkbase"
+
+sed -i -e 150c"Hostname=$nMOUNT$rtk" zabbix_agentd.conf
+
 
 sudo cp zabbix_agentd.conf /etc/zabbix/
 
- 
 sudo systemctl enable zabbix-agent
 sudo systemctl start zabbix-agent
 
