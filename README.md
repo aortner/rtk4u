@@ -1,6 +1,11 @@
 
 Installation
 ------------
+
+Es ist notwendig sich vorher mit mir in Verbindung zu setzten. Für den Zugang zum Caster und einen reservierten
+
+Mountpoint brauchen sie einen usernamen und password von mir!
+
 Zum installieren folgendes ausführen:
 
 sd karte der alten basis aufbewahren(als backup)
