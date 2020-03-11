@@ -2,9 +2,17 @@
 Installation
 ------------
 
-Es ist notwendig sich vorher mit mir in Verbindung zu setzten. Für den Zugang zum Caster und einen reservierten
+Es ist notwendig sich vorher mit mir in Verbindung zu setzten. 
+
+Für den Zugang zum Caster und einen reservierten
 
 Mountpoint brauchen sie einen usernamen und password von mir!
+
+Hier gibt es sonst eine fertige SD - Karte dafür!
+
+https://www.autosteer.cc/produkt/sd-karte-fuer-rtk4u/
+
+
 
 Zum installieren folgendes ausführen:
 
