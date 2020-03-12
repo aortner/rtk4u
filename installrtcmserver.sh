@@ -50,6 +50,13 @@ echo "Type=simple" >> startntripserver.service
 echo "Restart=always" >> startntripserver.service
 echo "RestartSec=10" >> startntripserver.service
 echo "ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n $nUSER -c $nPASSWORD -a 185.164.4.143 -p 2101 -m $nMOUNT" >> startntripserver.service
+#echo "ExecStart=/bin/bash -c "/usr/bin/socat -u TCP:localhost:2102 - | /usr/bin/python3 /usr/local/bin/rtcmadd1008.py |/usr/local/bin/ntripserver -M 3 -O 1 -n $nUSER -c $nPASSWORD -a 185.164.4.143 -p 2101 -m $nMOUNT" >> startntripserver.service
+
+
+[Install]
+WantedBy=multi-user.target
+
+
 echo "" >> startntripserver.service
 echo "[Install]" >> startntripserver.service
 echo "WantedBy=multi-user.target" >> startntripserver.service
