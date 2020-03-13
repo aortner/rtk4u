@@ -3,7 +3,7 @@
 echo ""
 
 echo "jetzt wird das programm compiliert - das kann dauern"
-cp rtcmadd1008.py /usr/local/bin/
+sudo cp rtcmadd1008.py /usr/local/bin/
 
 
 make
