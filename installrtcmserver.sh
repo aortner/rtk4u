@@ -103,7 +103,7 @@ rtk="-rtkbase"
 
 sed -i -e 150c"Hostname=$nMOUNT$rtk" zabbix_agentd.conf
 
-read -p "Server IP von RTK4U (ohne Port eingeben): " nSip
+read -p "Server IP von RTK4U ohne Port eingeben " nSip
 
 sed -i -e 140c"ServerActive=$nSip" zabbix_agentd.conf
 sed -i -e 98c"Server=$nSip" zabbix_agentd.conf
