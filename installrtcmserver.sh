@@ -60,16 +60,6 @@ if [ "$ANTWORT" == "ja" ]
        
 fi
 
-
-
-
-
-
-
-[Install]
-WantedBy=multi-user.target
-
-
 echo "" >> startntripserver.service
 echo "[Install]" >> startntripserver.service
 echo "WantedBy=multi-user.target" >> startntripserver.service
