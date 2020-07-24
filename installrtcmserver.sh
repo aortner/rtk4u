@@ -2,7 +2,7 @@
 
 echo ""
 
-echo "jetzt wird das programm compiliert - das kann dauern"
+echo "compiling please wait"
 sudo cp rtcmadd1008.py /usr/local/bin/
 
 
@@ -15,13 +15,13 @@ echo ""
 echo ""
 
 
-echo "Geben sie ihren gewuenschten Mountpoint ein:"
-echo "Format: BL-BE-Mountpoint"
-echo "zb: ST-GR-DAHEIM"
-echo "bedeutet: Steiermark , Graz und Daheim als Name"
+echo "Please enter mountpoint:"
+echo "Format: AT-BL-BE-Mountpoint"
+echo "zb: AT-ST-GR-ADDHOME"
+echo "means: Austria-Styria-Graz and addhome as name"
 echo ""
 echo ""
-read -p "ENTER um zu starten" ee
+read -p "ENTER um to starten" ee
 
 echo ""
 
@@ -29,7 +29,7 @@ read -p "Mountpoint:" nMOUNT
 
 echo ""
 
-read -p "Benutzer:" nUSER
+read -p "User:" nUSER
 
 echo ""
 
@@ -39,7 +39,7 @@ read -p "PASSWORD: " nPASSWORD
 echo ""
 
 
-echo "Schreibe startntripserver.service"
+echo "write startntripserver.service"
 
 echo "[Unit]" > startntripserver.service
 echo "Description=ntripserver for rtk4you" >> startntripserver.service
@@ -50,13 +50,13 @@ echo "Type=simple" >> startntripserver.service
 echo "Restart=always" >> startntripserver.service
 echo "RestartSec=10" >> startntripserver.service
 
-echo "RTCM 1008 einfügen? ja/nein"
+echo "RTCM 1008 inject? y/n"
 read ANTWORT
-if [ "$ANTWORT" == "ja" ]
+if [ "$ANTWORT" == "y" ]
     then
-    echo "ExecStart=/bin/bash -c \" /usr/bin/socat -u TCP:localhost:2102 - | /usr/bin/python3 /usr/local/bin/rtcmadd1008.py |/usr/local/bin/ntripserver -M 3 -O 1 -n $nUSER -c $nPASSWORD -a 185.164.4.143 -p 2101 -m $nMOUNT\"" >> startntripserver.service
+    echo "ExecStart=/bin/bash -c \" /usr/bin/socat -u TCP:localhost:2102 - | /usr/bin/python3 /usr/local/bin/rtcmadd1008.py |/usr/local/bin/ntripserver -M 3 -O 1 -n $nUSER -c $nPASSWORD -a  gps.rtk4u.com  -p 2101 -m $nMOUNT\"" >> startntripserver.service
     else
-    echo "ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n $nUSER -c $nPASSWORD -a 185.164.4.143 -p 2101 -m $nMOUNT" >> startntripserver.service
+    echo "ExecStart=/usr/local/bin/ntripserver -M 2 -H 127.0.0.1 -P 2102 -O 1 -n $nUSER -c $nPASSWORD -a gps.rtk4u.com -p 2101 -m $nMOUNT" >> startntripserver.service
        
 fi
 
@@ -93,7 +93,7 @@ rtk="-rtkbase"
 
 sed -i -e 150c"Hostname=$nMOUNT$rtk" zabbix_agentd.conf
 
-nSip = "rtk4u.rtk.co.at"
+nSip="gps.rtk4u.com"
 
 sed -i -e 140c"ServerActive=$nSip" zabbix_agentd.conf
 sed -i -e 98c"Server=$nSip" zabbix_agentd.conf
@@ -108,8 +108,8 @@ sudo systemctl start zabbix-agent
 
 
 echo ""
-echo "System fertig"
-echo "Viel Erfolg mit RTK4U"
-echo ""
+echo "System running"
+echo "Have fun with RTK4U"
+echo "please restart raspberry"
 echo ""
 
