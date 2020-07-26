@@ -36,7 +36,7 @@ sudo apt-get install git nano socat
  git clone https://github.com/aortner/rtk4u.git
 
 
-cd rtcmserver
+cd rtk4u
 
 ./installrtcmserver.sh
 
