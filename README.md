@@ -2,41 +2,30 @@
 Installation
 ------------
 
-Es ist notwendig sich vorher mit mir in Verbindung zu setzten. 
+Do install the Base station you need to talk with me before.
 
-Für den Zugang zum Caster und einen reservierten
-
-Mountpoint brauchen sie einen usernamen und password von mir!
-
-Hier gibt es sonst eine fertige SD - Karte dafür!
-
-https://www.autosteer.cc/produkt/sd-karte-fuer-rtk4u/
+You need the name of the mountpoint and user und password first.
 
 
+for installation you need:
 
-Zum installieren folgendes ausführen:
+download from https://www.raspberrypi.org/downloads/raspbian/
 
-sd karte der alten basis aufbewahren(als backup)
+Raspbian Buster Lite 
 
-neue sd karte verwenden
+put it on a sd card
 
-zuerst von https://www.raspberrypi.org/downloads/raspbian/
+insert a data with the name ssd on root of sd card
 
-Raspbian Buster Lite herunterladen. 
+put sd kart into raspberry, connect ethernet and power
 
-auf eine SD Karte spielen
+look for the ip of pi
 
-auf der boot Partition einen textdatei mit dem namen ssh anlegen (keine endung!)
+use ssh (eg Putty) to connect with raspberry 
 
-sd karten in den raspberry einlegen, mit netzwerk verbinden
+login:pi - password: raspberry
 
-die ipadresse vom rasperry suchen
-
-mit ssh (zb Putty) mit raspberry verbinden
-
-login als pi - password raspberry
-
-passwd   # ändert das Password - altes Password eingeben und neues anlegen!
+sudo passwd   # change password with passwd
 
 sudo apt-get update
 
@@ -50,6 +39,8 @@ sudo apt-get install git nano socat
 cd rtcmserver
 
 ./installrtcmserver.sh
+
+have fun
 
 
 ----------------------------------------------------------------------
