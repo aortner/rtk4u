@@ -15,13 +15,13 @@ echo ""
 echo ""
 
 
-echo "Please enter mountpoint:"
+echo "Please enter your mountpoint:"
 echo "Format: AT-BL-BE-Mountpoint"
-echo "zb: AT-ST-GR-ADDHOME"
+echo "zb: AUT-ST-ADDHOME"
 echo "means: Austria-Styria-Graz and addhome as name"
 echo ""
 echo ""
-read -p "ENTER um to starten" ee
+read -p "press ENTER to start" ee
 
 echo ""
 
@@ -82,11 +82,11 @@ sudo systemctl enable startntripserver.service
 
 sudo systemctl start startntripserver.service
 
-echo "Richte Monitoring system ein"
-echo "lade Agent herunter"
+echo "Enable Monitoring system zabbix"
+echo "download zabbix agent"
 sudo apt-get install zabbix-agent
 
-echo "update und konfiguriere zabbix-agent"
+echo "update and configure zabbix-agent"
 
 
 rtk="-rtkbase"
@@ -110,6 +110,6 @@ sudo systemctl start zabbix-agent
 echo ""
 echo "System running"
 echo "Have fun with RTK4U"
-echo "please restart raspberry"
-echo ""
+echo "Please restart raspberry"
+echo "using sudo reboot now"
 
