@@ -44,7 +44,7 @@ sudo apt-get upgrade
 
 sudo apt-get install git nano socat
 
- git clone https://github.com/aortner/rtcmserver.git
+ git clone https://github.com/aortner/rtk4u.git
 
 
 cd rtcmserver
