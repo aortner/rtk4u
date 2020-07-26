@@ -40,6 +40,8 @@ cd rtk4u
 
 ./installrtcmserver.sh
 
+sudo reboot now
+
 have fun
 
 
